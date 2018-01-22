@@ -1,0 +1,97 @@
+﻿textarea {
+  white-space: pre;
+  word-wrap: normal;
+  overflow-x: scroll;
+}
+
+.verticalLine {
+    border-left: thick solid #ff0000;
+}
+
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+  display: none !important;
+}
+
+.textarea {
+    padding-left: 30px !important;
+    padding-right: 30px !important;
+}
+
+.custom-panel {
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.base-panel{
+    -webkit-transition: border-color 1s;
+    transition: border-color 1s;
+}
+
+.custom-panel-heading {
+    -webkit-transition: background-color 1s;
+    transition: background-color 1s;
+}
+
+.custom-panel-body {
+    -webkit-transition: visibility 0s, opacity 0.5s linear;
+    transition: visibility 0s, opacity 0.5s linear;
+}
+
+.inner-panel-body {
+    border: 1px;
+    border-style: solid;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.panel .custom-panel-body {
+  opacity: 1;
+}
+
+.custom-panel-body.ng-hide:not(.ng-hide-animate) {
+  /* this is just another form of hiding an element */
+  display: block!important;
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+.custom-panel-body.ng-hide-add, .custom-panel-body.ng-hide-remove {
+  /* this is required as of 1.3x to properly
+     apply all styling in a show/hide animation */
+  transition: 1s linear all;
+}
+
+.custom-panel-body.ng-hide-add-active,
+.custom-panel-body.ng-hide-remove-active {
+  /* the transition is defined in the active class */
+  transition: 1s linear all;
+}
+
+.panel .custom-panel-body.ng-hide-add, .panel .custom-panel-body.ng-hide-remove {
+  transition: all linear 0.5s;
+}
+
+.panel .custom-panel-body.ng-hide {
+  opacity: 0;
+}
+
+.input-data-heading{
+    text-align:center;
+    padding-top:10px;
+    padding-bottom:10px;
+}
+
+.centre-input{
+    display: block;
+    margin : 0 auto;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.inner-panel{
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+}

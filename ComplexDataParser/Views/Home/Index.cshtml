@@ -1,0 +1,39 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div ng-controller="ComplexDataParserController as vm" ng-cloak>
+    <div class="page-header">
+        <h1>Complex Data Parser</h1>
+        <div class="test-muted">Be able to convert data structures and output them as any format as you please.</div>
+        <div>{{vm.test}}</div>
+    </div>
+
+    @*<div class="row" ng-cloak>
+        <div class="row-fluid"></div>
+        <div class="row">
+            <form>
+                <div class="col-md-5 textarea"><textarea class="form-control" rows="30" wrap="soft"></textarea></div>
+                <div class="col-md-1"></div>
+                <div class="verticalLine"></div>
+                <div class="col-md-1"></div>
+                <div class="col-md-5 textarea "><textarea class="form-control" rows="30" wrap="soft"></textarea></div>
+            </form>
+        </div>
+    </div>*@
+
+    @Html.Partial("_Input")
+
+    <br />
+    <br />
+
+    @Html.Partial("_Output")
+</div>
+
+@section Scripts {
+    <script src="~/Scripts/Common/Index.js" type="text/javascript"></script>
+    <script src="~/Scripts/angular.js" type="text/javascript"></script>
+    <script src="~/Scripts/App/app.js" type="text/javascript"></script>
+    <script src="~/Scripts/Controllers/IndexController.js" type="text/javascript"></script>
+    <script src="~/Scripts/Directives/Fileread.js" type="text/javascript"></script>
+}

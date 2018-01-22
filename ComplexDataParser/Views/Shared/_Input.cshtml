@@ -1,0 +1,78 @@
+﻿<div class="row">
+    <div class="col-md-6">
+        <h2>Input</h2>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        Define your input
+    </div>
+</div>
+<br />
+<div class="row custom-panel">
+    <div class="panel base-panel panel-default">
+        <div class="panel-heading custom-panel-heading">
+            Data
+        </div>
+        <div class="panel-body">
+            @*<div class="col-md-2">
+                    <form method="post" action="https://css-tricks.com/examples/DragAndDropFileUploading//?" enctype="multipart/form-data" novalidate="" class="">
+                        <div class="box__input">
+                            <input fileread="vm.inputFile" type="file" name="files[]" id="file" class="box__file" data-multiple-caption="{count} files selected" multiple="">
+                            <label for="file"><strong>Choose a file</strong><span class="box__dragndrop"> or drag it here</span>.</label>
+                            <button type="submit" class="box__button">Upload</button>
+                        </div>
+                        <div class="box__uploading">Uploading…</div>
+                        <div class="box__success">Done! <a href="https://css-tricks.com/examples/DragAndDropFileUploading//?" class="box__restart" role="button">Upload more?</a></div>
+                        <div class="box__error">Error! <span></span>. <a href="https://css-tricks.com/examples/DragAndDropFileUploading//?" class="box__restart" role="button">Try again!</a></div>
+                        <input type="hidden" name="ajax" value="1">
+                    </form>
+                </div>*@
+            @*<div class="col-md-10">*@
+            @*<div class="btn-group" role="group">
+                <input type="file" class="btn btn-default" ng-click="vm.objectMode=1">UploadFile</input>
+            </div>*@
+            <div class="col-md-2 col-md-offset-5">
+                <div class="input-data-heading">Upload a file</div>
+            </div>
+            <div class="col-md-4 col-md-offset-4 input-data-heading">
+                <input type="file" class="btn btn-default centre-input" fileread="vm.inputFile" />
+            </div>
+            <div class="col-md-2 col-md-offset-5">
+                <div class="input-data-heading">-- OR --</div>
+            </div>
+            <div class="col-md-2 col-md-offset-5">
+                <div class="input-data-heading">Enter your data below</div>
+            </div>
+            <div>
+                <textarea ng-model="vm.inputText" class="form-control" rows="5" wrap="soft"></textarea>
+            </div>
+        </div>
+    </div>
+    <div class="panel base-panel" ng-class="{'panel-default':!vm.objectFocus, 'panel-info':vm.objectFocus || vm.objectMode==1, 'panel-success':vm.objectMode==2}">
+        <div class="panel-heading custom-panel-heading">
+            Objects
+        </div>
+        <div class="panel-body">
+            <div class="btn-group" role="group">
+                <button type="button" class="btn btn-default" ng-click="vm.objectMode=1">Create</button>
+                <button type="button" class="btn btn-default" ng-click="vm.objectMode=2">No Objects</button>
+            </div>
+        </div>
+        @Html.Partial("_CreateInput")
+        <div class="panel-body">
+            <textarea readonly ng-model="vm.inputText" class="form-control" rows="5" wrap="soft"></textarea>
+        </div>
+    </div>
+    <div class="panel panel-default">
+        <div class="panel-heading">
+            Properties
+        </div>
+        <div class="panel-body">
+            thing 2
+        </div>
+        <div class="panel-body">
+            <textarea readonly ng-model="vm.inputText" class="form-control" rows="5" wrap="soft"></textarea>
+        </div>
+    </div>
+</div>

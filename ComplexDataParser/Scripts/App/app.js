@@ -1,0 +1,1 @@
+﻿var eventsApp = angular.module('ComplexDataParserApp', []);
